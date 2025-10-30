@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Social Sentry</string>
+    <string name="accessibility_service_description">Social Sentry monitors social media apps to block distracting content like Reels, Shorts, and Stories. This service only detects when you enter blocked content and redirects you to the main feed. No personal data is collected or shared.</string>
+</resources>
