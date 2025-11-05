@@ -12,6 +12,24 @@ Social Sentry is a free app that helps you block addictive short videos and reel
 
 💡 **User-Friendly Interface** - Simple and intuitive design
 
+## 📥 How to Install
+
+1. **Download the latest version** from [GitHub Releases](https://github.com/mkshaonexe/Social-sentry-publich/releases)
+
+2. **Install the APK** on your Android device
+
+3. **Open the app** after installation
+
+4. **Grant Accessibility Service Permission:**
+   - Go to the **3-line menu** (hamburger menu)
+   - Click on the **top right warning icon**
+   - Click on the **Accessibility Service Permission** option
+
+5. **Verify Installation:**
+   - Check the **home page top** for any warning sign
+   - If you see a warning sign, you haven't given the permission yet - **give permission first**
+   - If you're unable to see the warning sign or need visual guidance, check out this [YouTube tutorial video](https://youtu.be/_ZM__jHfrl0?si=WL7HvvJ50cQSGEKk)
+
 ## Getting Started
 
 ### Prerequisites
