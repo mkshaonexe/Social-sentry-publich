@@ -156,7 +156,6 @@ fun SettingsScreen(
             onCardClick = {
                 if (!appSettings.developerModeUnlocked) {
                     developerModeClicks++
-                    val remaining = 7 - developerModeClicks
                     
                     if (developerModeClicks >= 7) {
                         viewModel.updateDeveloperModeUnlocked(true)
@@ -164,12 +163,6 @@ fun SettingsScreen(
                         android.widget.Toast.makeText(
                             context,
                             "🎉 Developer Mode Unlocked!",
-                            android.widget.Toast.LENGTH_SHORT
-                        ).show()
-                    } else {
-                        android.widget.Toast.makeText(
-                            context,
-                            "🔒 $remaining more ${if (remaining == 1) "click" else "clicks"} to unlock Developer Mode",
                             android.widget.Toast.LENGTH_SHORT
                         ).show()
                     }
