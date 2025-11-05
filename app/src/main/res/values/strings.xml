@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Social Sentry</string>
+    <string name="accessibility_service_description">Social Sentry uses this permission to detect and block Instagram Reels, YouTube Shorts, and TikTok</string>
+</resources>

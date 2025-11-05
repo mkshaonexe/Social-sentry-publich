@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/accessibility_service_description"
+    android:packageNames="com.instagram.android, com.google.android.youtube, com.zhiliaoapp.musically, com.facebook.katana, com.facebook.lite"
+    android:accessibilityEventTypes="typeWindowContentChanged|typeWindowStateChanged|typeViewClicked|typeViewFocused|typeViewScrolled|typeWindowsChanged"
+    android:accessibilityFeedbackType="feedbackAllMask"
+    android:notificationTimeout="0"
+    android:canRetrieveWindowContent="true"
+    android:accessibilityFlags="flagReportViewIds|flagRetrieveInteractiveWindows" />
+
