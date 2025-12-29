@@ -1,199 +1,187 @@
-# Privacy Policy for Social Sentry
+# Privacy Policy for SocialSentry
 
-**Last Updated:** November 26, 2025  
-**Effective Date:** November 26, 2025
+**Last Updated:** December 30, 2025
 
 ## Introduction
 
-Social Sentry ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains how our Android application handles your information.
+Welcome to SocialSentry ("we," "our," or "the app"). We are committed to protecting your privacy and being transparent about how we handle your information. This Privacy Policy explains what data we collect, why we collect it, and how we use it.
 
-## Data Collection
+SocialSentry is a productivity and digital wellbeing app designed to help you manage distractions, block unwanted content, and build healthy digital habits.
 
-**Social Sentry collects ZERO data.**
+## Data We Collect
 
-We do not:
-- ❌ Collect any personal information
-- ❌ Collect any usage data
-- ❌ Collect any analytics
-- ❌ Store any user content
-- ❌ Track your behavior
-- ❌ Access your contacts, messages, or files
-- ❌ Record your screen or audio
+### 1. Analytics Data (via Firebase Analytics)
 
-## What We Access
+We collect anonymous usage analytics to understand how users interact with the app and improve the user experience:
 
-Social Sentry uses Android Accessibility Service API **exclusively** for digital wellbeing features:
+**What we collect:**
+- App screen views and navigation patterns
+- Feature usage statistics (e.g., which features you enable/disable)
+- Button clicks and user interactions
+- App performance metrics
+- Device information (device model, OS version, language)
+- General location (country/region level only)
 
-### Monitored Apps
-The app only monitors these 8 social media applications:
-- Instagram (`com.instagram.android`)
-- YouTube (`com.google.android.youtube`)
-- TikTok (`com.zhiliaoapp.musically`)
-- Facebook (`com.facebook.katana`)
-- Facebook Lite (`com.facebook.lite`)
-- Threads (`com.instagram.barcelona`, `com.instagram.threadsapp`)
-- Pinterest (`com.pinterest`)
+**Why we collect it:**
+- To understand which features are most valuable to users
+- To identify and fix bugs and crashes
+- To improve app performance and user experience
+- To make data-driven decisions about future features
 
-### What We Read
-The Accessibility Service reads:
-- UI element labels and descriptions (e.g., "Reels", "Shorts")
-- Screen titles to detect specific sections
-- Button states for auto-mute feature
+**Important:** This data is anonymous and cannot be used to identify you personally.
 
-**All processing happens locally on your device in real-time. Nothing is stored, logged, or transmitted.**
+### 2. Crash Reports (via Firebase Crashlytics)
 
-## Features & Permissions
+We automaticallyreceive crash reports when the app experiences technical issues:
 
-### 1. Block Reels & Shorts 🚫
-- **What it does:** Automatically navigates away from short-form video sections
-- **Why we need it:** Must read UI to detect Reels/Shorts screens and perform back navigation
-- **Data collected:** NONE - only reads UI labels in real-time
+**What we collect:**
+- Stack traces and error logs
+- Device state at the time of crash
+- App version and configuration
 
-### 2. Safety Countdown ⏸️
-- **What it does:** Shows 5-second motivational overlay before opening social media apps
-- **Why we need it:** Must detect app launches and display intervention overlay
-- **Data collected:** NONE - timestamp-based blocking only
+**Why we collect it:**
+- To identify and fix technical issues quickly
+- To improve app stability and reliability
 
-### 3. Time-Based Scroll Limiter ⏱️
-- **What it does:** Enforces customizable time limits with mandatory breaks
-- **Why we need it:** Must track scroll events and usage time
-- **Data collected:** Usage time stored locally only (never transmitted)
+### 3. Community Features (via Supabase)
 
-### 4. Auto-Mute Facebook Videos 🔇
-- **What it does:** Automatically clicks mute buttons on Facebook videos
-- **Why we need it:** Must locate and click UI elements
-- **Data collected:** NONE - only performs actions in real-time
+When you use our Community features (global chat, ranking system), we collect and store:
 
-## Permissions Required
+**What we collect:**
+- **Google Account Information:** When you sign in with Google to access community features, we receive your Google user ID, email address, and profile information (name, profile picture) from Google
+- **Chat Messages:** The content of messages you send in the global chat
+- **User Profile:** Username, rank/badge level, and avatar (if customized)
+- **Ranking Data:** Your current rank and achievement level in the ranking system
 
-### Accessibility Service (`BIND_ACCESSIBILITY_SERVICE`)
-**Why needed:** Core functionality for all features listed above  
-**Scope:** Limited to 8 monitored apps only  
-**Data access:** UI element labels only (read-only)
+**Why we collect it:**
+- To enable social features like global chat and rankings
+- To display your profile and messages to other users
+- To prevent abuse and maintain community guidelines
+- To provide authentication for community features
 
-### Usage Stats (`PACKAGE_USAGE_STATS`)
-**Why needed:** Track time spent in apps for scroll limiter  
-**Scope:** Only for monitored apps  
-**Data stored:** Locally only, never transmitted
+**Important:** 
+- Your Google email is never shared publicly with other users
+- Only your username, rank, and avatar are visible to other community members
+- You can block other users to hide their messages from your view
 
-### Display Over Apps (`SYSTEM_ALERT_WINDOW`)
-**Why needed:** Show countdown and break overlays  
-**Data access:** None - only displays UI
+### 4. Local Data Storage (Device Only)
 
-### Boot Completed (`RECEIVE_BOOT_COMPLETED`)
-**Why needed:** Maintain service after device restart  
-**Data access:** None
+The following data is stored ONLY on your device and never sent to our servers:
 
-### Activity Recognition (`ACTIVITY_RECOGNITION`)
-**Why needed:** Future feature for walking counter  
-**Data access:** None currently used
+- App blocking settings (which apps you've chosen to block)
+- Reels blocker preferences  
+- Scroll limiter configurations
+- Safety mode settings
+- Prime Mode status
+- Todo lists and tasks
+- Study timer and walking counter history
+- Adult content blocking preferences
+- Daily activity tracking for the calendar heatmap
+- Unblock allowance and time management settings
+- User preferences and customization options
 
-## How We Use Information
+**Important:** This data stays on your device and is never uploaded to our servers or shared with third parties.
 
-**We don't.** 
+## Permissions We Request
 
-Social Sentry operates 100% offline:
-- ✅ No internet connection required
-- ✅ No data transmission to servers
-- ✅ No cloud storage
-- ✅ No third-party services
-- ✅ No advertising networks
-- ✅ No analytics platforms
+### Required Permissions:
 
-## Data Storage
+1. **Accessibility Service** - Used to detect and block reels/short-form content and adult content on supported apps (Instagram, YouTube, TikTok, Facebook, etc.). This permission allows the app to read screen content ONLY for blocking purposes. We do NOT collect, store, or transmit any personal data viewed through accessibility services.
 
-Only these settings are stored **locally on your device**:
-- Your preference toggles (which features are enabled/disabled)
-- Time limits you set for scroll limiter
-- Your app theme preference
+2. **Usage Stats Access** - Required to track which apps you use and enforce app limits and blocking rules. This data stays on your device.
 
-**Storage method:** Android DataStore (encrypted local storage)  
-**Location:** Your device only  
-**Backup:** Optional via Android Auto Backup (user preferences only)
+3. **Display Over Other Apps** - Used to show blocking overlays and safety countdown screens when you try to access blocked content.
 
-## Third-Party Services
+4. **Disable Battery Optimization** - Ensures the app continues working in the background to maintain blocking features.
 
-**Social Sentry uses ZERO third-party services.**
+5. **Internet Access** - Required for Firebase Analytics, crash reporting, and community features (chat, ranking, authentication).
 
-No dependencies on:
-- Analytics (Google Analytics, Firebase, etc.)
-- Crash reporting (Crashlytics, Sentry, etc.)
-- Advertising networks
-- Cloud services
-- Social media SDKs
+6. **Notifications** - Used to send you alerts about Prime Mode activation, blocking status, and other app-related notifications.
 
-## Your Rights
+### Optional Permissions:
 
-You have complete control:
-- ✅ **Disable anytime** - Turn off accessibility service in Android settings
-- ✅ **Uninstall anytime** - No restrictions or prevention
-- ✅ **Delete data** - Uninstalling removes all local data
-- ✅ **View permissions** - Check in Android app settings
+7. **Activity Recognition** - Only used for the walking counter feature. You can deny this if you don't use the walking counter.
 
-## Children's Privacy
+## How We Use Your Data
 
-Social Sentry does not collect any data from anyone, including children under 13. The app is safe for all ages.
+- **Analytics Data:** To improve app features, fix bugs, and understand usage patterns
+- **Crash Reports:** To identify and resolve technical issues
+- **Community Data:** To provide social features like global chat and ranking system
+- **Blocking Data:** Stored locally on your device to enforce your blocking preferences
 
-## Changes to Privacy Policy
+## Data Sharing
 
-We may update this policy occasionally. Changes will be posted:
-- In this document (with updated "Last Updated" date)
-- In the app's GitHub repository
-- In Play Store listing
+We do NOT sell, rent, or share your personal data with third parties for marketing purposes.
 
-Continued use after changes constitutes acceptance of the updated policy.
-
-## Contact Information
-
-**Developer:** MK Shaon  
-**Email:** mkshaon2024@gmail.com  
-**Website:** https://mkshaon.com/social_sentry  
-**GitHub:** https://github.com/mkshaonexe/Social-sentry-publich  
-
-For privacy concerns, questions, or requests, contact us at: **mkshaon2024@gmail.com**
-
-## Compliance
-
-Social Sentry complies with:
-- ✅ Google Play Developer Policies
-- ✅ Android Accessibility Service API Policy
-- ✅ General Data Protection Regulation (GDPR) - no data collected
-- ✅ California Consumer Privacy Act (CCPA) - no data collected
-- ✅ Children's Online Privacy Protection Act (COPPA) - no data collected
-
-## Legal Basis (GDPR)
-
-Since we collect **zero data**, no legal basis for data processing is required. The app processes UI information **locally and temporarily** only to provide its core functionality.
+**Third-Party Services:**
+- **Google Firebase:** Processes anonymous analytics and crash reports (Google Privacy Policy: https://policies.google.com/privacy)
+- **Supabase:** Hosts community features and authentication (Supabase Privacy Policy: https://supabase.com/privacy)
+- **Google Sign-In:** Used for authentication in community features (Google Privacy Policy: https://policies.google.com/privacy)
 
 ## Data Retention
 
-**Retention period:** NONE
+- **Analytics Data:** Retained for up to 14 months automatically by Firebase
+- **Crash Reports:** Retained for 90 days
+- **Community Data:** Retained until you delete your account or request deletion
+- **Local Device Data:** Retained until you uninstall the app or clear app data
 
-We do not retain any user data. All processing is real-time and local. When you uninstall the app, all local settings are deleted from your device.
+## Your Rights
 
-## Security
+You have the right to:
 
-While we don't collect data, we implement security best practices:
-- ✅ No network access (offline-only)
-- ✅ Local data encryption (Android DataStore)
-- ✅ Minimal permission scope
-- ✅ Code obfuscation (ProGuard)
-- ✅ Regular security audits
+1. **Access Your Data:** Request a copy of data we have about you (limited to community profile data)
+2. **Delete Your Data:** 
+   - Community data: Contact us to delete your chat messages and profile
+   - Local data: Clear app data or uninstall the app
+3. **Opt-Out of Analytics:** We collect minimal anonymous analytics, but if you wish to completely opt-out, contact us
+4. **Block Users:** Block other users in the community to hide their messages
 
-## Transparency
+## Children's Privacy
 
-This app is designed with **privacy-first** principles:
-- Open about what it does
-- Clear about what it accesses
-- Transparent about its limitations
-- Honest about its capabilities
+SocialSentry is intended for users age 13 and older. We do not knowingly collect personal information from children under 13. If you believe we have collected data from a child under 13, please contact us immediately.
+
+## Changes to This Privacy Policy
+
+We may update this Privacy Policy from time to time. We will notify you of any significant changes by:
+- Updating the "Last Updated" date
+- Showing an in-app notification
+- Posting the new policy in the app's menu
+
+## Data Security
+
+We implement industry-standard security measures to protect your data:
+- All data transmission is encrypted using HTTPS/TLS
+- Community features use Supabase's security infrastructure
+- Local data is stored using Android's encrypted DataStore
+- We regularly review and update our security practices
+
+## Contact Us
+
+If you have questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:
+
+**Email:** mkshaonnew31@gmail.com
+**GitHub:** https://github.com/mkshaonexe/SocialSentryPublic
+
+## Legal Basis for Processing (GDPR)
+
+If you are in the European Economic Area (EEA), our legal basis for collecting and using your data is:
+- **Consent:** When you opt-in to use community features
+- **Legitimate Interest:** For analytics and crash reporting to improve the app
+- **Contract:** To provide the services you've requested (blocking features)
+
+## Your Consent
+
+By using SocialSentry, you consent to this Privacy Policy and agree to its terms. If you do not agree, please discontinue use of the app.
 
 ---
 
-**Summary:** Social Sentry is a 100% offline, privacy-respecting digital wellbeing app that collects absolutely no data. Everything happens on your device, and nothing leaves your device.
-
-If you have any questions about this Privacy Policy, please contact us at mkshaon2024@gmail.com.
-
----
-
-**Acknowledgment:** By using Social Sentry, you acknowledge that you have read and understood this Privacy Policy.
+**Summary of Data Collection:**
+- ✅ Firebase Analytics: Anonymous usage data
+- ✅ Firebase Crashlytics: Anonymous crash reports  
+- ✅ Supabase Authentication: Google account info (when you sign in)
+- ✅ Supabase Database: Chat messages, user profiles, ranking data (when you use community)
+- ✅ Local Storage: App settings and preferences (never leaves your device)
+- ❌ NO ads or ad tracking
+- ❌ NO sale of personal data
+- ❌ NO collection of sensitive personal data (contacts, photos, messages from other apps)
+- ❌ NO tracking of accessibility service data beyond blocking functionality
